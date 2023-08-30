@@ -1,0 +1,48 @@
+<!--Import Google Icon Font-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href= "https://fonts.googleapis.com/icon?family=Material+Icons" rel= "stylesheet">
+    <link rel="stylesheet" href="./chatbot.css">
+    
+</head>
+<body>
+    <div id= "chatbot" style="display: none;">
+    
+		<div id= "chatbot-header">
+			<div id= "chatbot-logo">チャットにて承ります</div>
+            <div class="icon-box">
+                <i id= "chatbot-zoom-icon" class="material-icons waves-effect waves-light" onclick= "chatbotZoom()">fullscreen</i>
+                <i id= "chatbot-close-icon" class="material-icons waves-effect waves-light" onclick= "chatbotClose()">close</i>    
+            </div>
+        </div>
+    
+		<div id= "chatbot-body">
+			<ul id= "chatbot-ul"></ul>
+		</div>
+    
+		<!--入力場所，送信ボタン-->
+		<form onsubmit= "return false">
+			<div id= "chatbot-footer">
+				<input type= "text" id= "chatbot-text" class= "browser-default" placeholder= "テキストを入力">
+				<input type= "submit" value= "送信" id= "chatbot-submit">
+			</div>
+		</form>
+    
+	</div>
+    <div id="bot-icon" style="display: block;" onclick= "chatbotOpen()"">
+        <div class="icon-div fixed bottom-10 right-10 animate-bounce" >
+            <div class='icon-box-on bg-blue-500 w-20 h-20 flex justify-center items-center rounded-full cursor-pointer'>
+                <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 640 512" className='w-10 h-10' fill='white' style="width: 2.5rem;height: 2.5rem;"><path d="M320 0c17.7 0 32 14.3 32 32V96H472c39.8 0 72 32.2 72 72V440c0 39.8-32.2 72-72 72H168c-39.8 0-72-32.2-72-72V168c0-39.8 32.2-72 72-72H288V32c0-17.7 14.3-32 32-32zM208 384c-8.8 0-16 7.2-16 16s7.2 16 16 16h32c8.8 0 16-7.2 16-16s-7.2-16-16-16H208zm96 0c-8.8 0-16 7.2-16 16s7.2 16 16 16h32c8.8 0 16-7.2 16-16s-7.2-16-16-16H304zm96 0c-8.8 0-16 7.2-16 16s7.2 16 16 16h32c8.8 0 16-7.2 16-16s-7.2-16-16-16H400zM264 256a40 40 0 1 0 -80 0 40 40 0 1 0 80 0zm152 40a40 40 0 1 0 0-80 40 40 0 1 0 0 80zM48 224H64V416H48c-26.5 0-48-21.5-48-48V272c0-26.5 21.5-48 48-48zm544 0c26.5 0 48 21.5 48 48v96c0 26.5-21.5 48-48 48H576V224h16z"/></svg>
+            </div>
+        </div>
+    </div>
+</body>
+<script type="text/javascript" src="./chatbot.js"></script>
+</html>
+
+
+	
